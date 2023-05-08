@@ -5,13 +5,13 @@ type Reading = {
   title: string;
   url: string;
   memo: string;
-}
+};
 
 interface ReadingList {
-  list: Reading[]
+  list: Reading[];
 }
 export const useReadingList = () => {
-  const { isLoading, data, revalidate } = useFetch<ReadingList>('http://localhost:10020/list')
+  const { isLoading, data, revalidate } = useFetch<ReadingList>("http://127.0.0.1:80/list");
 
-  return { isLoading, data }
-}
+  return { isLoading, data };
+};
